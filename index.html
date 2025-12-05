@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Amazing Girlfriend ❤️</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Poppins:wght@300;400;500;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .scrapbook-container {
+            width: 100%;
+            max-width: 900px;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .scrapbook-header {
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            padding: 25px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .header-content h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.2rem;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            margin-bottom: 10px;
+        }
+        
+        .header-content p {
+            color: #fff;
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .heart {
+            color: #ff4757;
+            animation: heartbeat 1.5s infinite;
+            display: inline-block;
+        }
+        
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        
+        .scrapbook-body {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            gap: 20px;
+        }
+        
+        .left-panel {
+            flex: 1;
+            min-width: 300px;
+            background-color: #f9f7f7;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .right-panel {
+            flex: 2;
+            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .section {
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-left: 5px solid #ff9a9e;
+            position: relative;
+        }
+        
+        .section h2 {
+            font-family: 'Gochi Hand', cursive;
+            font-size: 1.8rem;
+            color: #ff6b81;
+            margin-bottom: 15px;
+        }
+        
+        .memory-item {
+            background-color: #f9f7f7;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-left: 4px solid #a29bfe;
+        }
+        
+        .memory-item h3 {
+            color: #6c5ce7;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .encouragement-box {
+            background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 10px 0;
+            font-size: 1.1rem;
+            position: relative;
+        }
+        
+        .encouragement-box i {
+            color: #6c5ce7;
+            margin-right: 8px;
+        }
+        
+        .quote {
+            font-style: italic;
+            text-align: center;
+            padding: 15px;
+            background-color: #fef9ed;
+            border-radius: 10px;
+            border-left: 4px solid #fdcb6e;
+            margin: 15px 0;
+        }
+        
+        .photo-frame {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+            background-color: #f1f2f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 15px 0;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .photo-placeholder {
+            font-size: 4rem;
+            color: #a4b0be;
+        }
+        
+        .interactive-section {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        
+        .mood-booster {
+            background-color: #ffeaa7;
+            border-radius: 10px;
+            padding: 15px;
+            width: 45%;
+            min-width: 150px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .mood-booster:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .mood-booster i {
+            font-size: 2rem;
+            color: #e17055;
+            margin-bottom: 10px;
+        }
+        
+        .mood-text {
+            font-weight: 600;
+            color: #d63031;
+        }
+        
+        .floating-hearts {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .floating-heart {
+            position: absolute;
+            font-size: 1.5rem;
+            color: #ff9a9e;
+            opacity: 0;
+            animation: floatUp 5s linear infinite;
+        }
+        
+        @keyframes floatUp {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        .message-input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #dfe6e9;
+            border-radius: 8px;
+            margin-top: 10px;
+            font-family: 'Poppins', sans-serif;
+            resize: vertical;
+        }
+        
+        .send-btn {
+            background: linear-gradient(to right, #74b9ff, #0984e3);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: all 0.3s;
+        }
+        
+        .send-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 10px rgba(116, 185, 255, 0.4);
+        }
+        
+        .footer-note {
+            text-align: center;
+            padding: 20px;
+            background-color: #f9f7f7;
+            color: #636e72;
+            font-style: italic;
+            border-top: 1px dashed #dfe6e9;
+        }
+        
+        @media (max-width: 768px) {
+            .scrapbook-body {
+                flex-direction: column;
+            }
+            
+            .header-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .mood-booster {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="scrapbook-container">
+        <div class="floating-hearts" id="hearts-container"></div>
+        
+        <div class="scrapbook-header">
+            <div class="header-content">
+                <h1>For My Amazing Sayang  <span class="heart">❤️</span></h1>
+                <p>A little digital scrapbook to remind you how incredible you are!</p>
+            </div>
+        </div>
+        
+        <div class="scrapbook-body">
+            <div class="left-panel">
+                <div class="section">
+                    <h2><i class="fas fa-heart"></i> Why You're Amazing</h2>
+                    <div class="memory-item">
+                        <h3><i class="fas fa-star"></i> You're So Strong</h3>
+                        <p>You've tackled challenges before and you'll conquer these exams too. I believe in you!</p>
+                    </div>
+                    <div class="memory-item">
+                        <h3><i class="fas fa-brain"></i> You're Incredibly Smart</h3>
+                        <p>Remember when you aced that difficult subject? You've got the brains to do it again!</p>
+                    </div>
+                    <div class="memory-item">
+                        <h3><i class="fas fa-laugh-beam"></i> Your Smile Is Contagious</h3>
+                        <p>Even when you're stressed, your smile lights up the room. Don't forget to take breaks and smile!</p>
+                    </div>
+                    
+                    <div class="quote">
+                        "Success is not final, failure is not fatal: it is the courage to continue that counts." - Winston Churchill
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h2><i class="fas fa-camera"></i> Si Cantik Saya <3 </h2>
+                    <div class="photo-frame">
+                        <div class="photo-placeholder">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-images"></i>
+                            <img src="luv.jpg" alt="Si Cantikk" style="width:100%; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.1);">
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+            
+            <div class="right-panel">
+                <div class="section">
+                    <h2><i class="fas fa-bullhorn"></i> Encouragement For Your Exams</h2>
+                    <div class="encouragement-box">
+                        <i class="fas fa-trophy"></i> You've prepared so well! Trust in your hard work and knowledge.
+                    </div>
+                    <div class="encouragement-box">
+                        <i class="fas fa-lightbulb"></i> One step at a time. You don't have to be perfect, just do your best.
+                    </div>
+                    <div class="encouragement-box">
+                        <i class="fas fa-cloud-sun"></i> This stress is temporary. Soon you'll be free and we'll celebrate together!
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h2><i class="fas fa-magic"></i> Quick Mood Boosters</h2>
+                    <p>Click on any of these for an instant mood lift!</p>
+                    
+                    <div class="interactive-section">
+                        <div class="mood-booster" id="compliment">
+                            <i class="fas fa-comment-dots"></i>
+                            <p class="mood-text">Dont give up!</p>
+                        </div>
+                        
+                        <div class="mood-booster" id="joke">
+                            <i class="fas fa-laugh-squint"></i>
+                            <p class="mood-text">Boost Mood</p>
+                        </div>
+                        
+                        <div class="mood-booster" id="breathing">
+                            <i class="fas fa-wind"></i>
+                            <p class="mood-text">Calm Breathing</p>
+                        </div>
+                        
+                        <div class="mood-booster" id="hug">
+                            <i class="fas fa-hands-helping"></i>
+                            <p class="mood-text">Virtual Hug</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h2><i class="fas fa-paper-plane"></i> Send You Love</h2>
+                    <p>Type a loving message to yourself (or I'll fill it in for you!):</p>
+                    <textarea class="message-input" id="loveMessage" rows="3" placeholder="You are capable, strong, and amazing. You've got this!"></textarea>
+                    <button class="send-btn" id="sendLove">Send Love & Support <i class="fas fa-heart"></i></button>
+                </div>
+                
+                <div class="section">
+                    <h2><i class="fas fa-calendar-check"></i> Post-Exam Plans</h2>
+                    <p>Things to look forward to after your exams:</p>
+                    <ul style="padding-left: 20px; margin-top: 10px;">
+                        <li>A movie session with your favorite snacks ;p</li>
+                        <li>That restaurant you've been wanting to try</li>
+                        <li>Sunset watching together</li>
+                        <li>Relaxing time for you (watson) ofc i treat</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-note">
+            <p>Remember, I'm always here for you. No matter what happens with exams, you're already a winner in my eyes. Love you! ❤️</p>
+        </div>
+    </div>
+
+    <script>
+        // Create floating hearts
+        function createHearts() {
+            const container = document.getElementById('hearts-container');
+            const heartCount = 15;
+            
+            for (let i = 0; i < heartCount; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'floating-heart';
+                heart.innerHTML = '❤️';
+                heart.style.left = `${Math.random() * 100}%`;
+                heart.style.animationDelay = `${Math.random() * 5}s`;
+                heart.style.fontSize = `${Math.random() * 1 + 1}rem`;
+                container.appendChild(heart);
+            }
+        }
+        
+        // Compliment generator
+        document.getElementById('compliment').addEventListener('click', function() {
+            const compliments = [
+                "I know your exams are tough, but so are you!",
+                "Sayang, you already did a great job!. just trust yourself.",
+                "You've got this! One step at a time.",
+                "You already have someone who proud of you, and that's me!",
+                "There is a long road ahead, but I believe in your strength and resilience.",
+                "Your effort wont betray you! You already made me proud.",
+                "Since day 1 you already amazing and manage to sway me <3",
+                "I believe in you more than you believe in yourself!"
+            ];
+            
+            const randomCompliment = compliments[Math.floor(Math.random() * compliments.length)];
+            alert(`💝 Compliment for you:\n\n"${randomCompliment}"`);
+        });
+        
+        // Joke generator
+        document.getElementById('joke').addEventListener('click', function() {
+            const jokes = [
+                "Kenapa kamera selalu tersenyum?\nsebab dia malu tengok you smiles ;p",
+                "Apa yang boleh naik tapi tak boleh turun?\ncinta saya dekat kamuuu!! hihihih <3",
+                "Kenapa gunting selalu berpasangan?\nsebab dia tak boleh hidup sendiri, macam kita :D",
+                "Kenapa bulan suka main sorok-sorok?\nsebab dia malu ada yang lagi cantik dari dia >;3 ",
+                "Kenapa pelangi ada banyak warna?\nSEBAB YOU WARNANYA HIDUP I! <333",
+            ];
+            
+            const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
+            alert(`😂 Silly Joke:\n\n${randomJoke}`);
+        });
+        
+        // Breathing exercise
+        document.getElementById('breathing').addEventListener('click', function() {
+            alert('🧘‍♀️ Calm Breathing Exercise:\n\n1. Breathe in slowly for 4 seconds\n2. Hold your breath for 4 seconds\n3. Breathe out slowly for 6 seconds\n4. Repeat 3 times\n\nFeel the stress melting away...');
+        });
+        
+        // Virtual hug
+        document.getElementById('hug').addEventListener('click', function() {
+            alert('🫂 Virtual Hug Incoming!\n\nSending you the biggest, warmest hug! Remember you\'re not alone in this. I\'m here with you every step of the way!');
+        });
+        
+        // Send love message
+        document.getElementById('sendLove').addEventListener('click', function() {
+            const messageInput = document.getElementById('loveMessage');
+            const message = messageInput.value.trim() || "You are capable, strong, and amazing. You've got this!";
+            
+            // Create a cute message display
+            const messageDiv = document.createElement('div');
+            messageDiv.style.cssText = `
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: linear-gradient(to right, #ff9a9e, #fad0c4);
+                color: white;
+                padding: 30px;
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+                z-index: 1000;
+                text-align: center;
+                max-width: 80%;
+                animation: fadeIn 0.5s;
+            `;
+            
+            messageDiv.innerHTML = `
+                <h3 style="font-family: 'Dancing Script', cursive; font-size: 2rem; margin-bottom: 15px;">Love Sent! 💖</h3>
+                <p style="font-size: 1.2rem;">"${message}"</p>
+                <button id="closeMessage" style="margin-top: 20px; padding: 10px 20px; background: white; border: none; border-radius: 8px; color: #ff6b81; font-weight: bold; cursor: pointer;">Close</button>
+            `;
+            
+            document.body.appendChild(messageDiv);
+            
+            // Close button functionality
+            document.getElementById('closeMessage').addEventListener('click', function() {
+                document.body.removeChild(messageDiv);
+            });
+            
+            // Auto-close after 8 seconds
+            setTimeout(() => {
+                if (document.body.contains(messageDiv)) {
+                    document.body.removeChild(messageDiv);
+                }
+            }, 8000);
+        });
+        
+        // Initialize the scrapbook
+        window.addEventListener('DOMContentLoaded', function() {
+            createHearts();
+            
+            // Add a welcome message
+            setTimeout(() => {
+                alert('Hai sayang, i created this for you <3 i hope ni dapat boost your mood! i always believe in you and love you so much! 💖');
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
